@@ -1,0 +1,21 @@
+.page-contact .quote-form--detailed {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.page-contact .quote-form--detailed .form-field:last-of-type,
+.page-contact .quote-form--detailed .form-note,
+.page-contact .quote-form--detailed .form-status,
+.page-contact .quote-form--detailed .button {
+  grid-column: 1 / -1;
+}
+
+.page-contact .contact-sidebar {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (max-width: 720px) {
+  .page-contact .quote-form--detailed {
+    grid-template-columns: 1fr;
+  }
+}

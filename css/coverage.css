@@ -1,0 +1,7 @@
+.page-coverage .coverage-grid--full {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.page-coverage .coverage-card--large h2 {
+  font-size: 1.6rem;
+}
