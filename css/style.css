@@ -766,6 +766,7 @@ body.nav-open {
 
 .footer-bottom {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
   gap: 1.5rem;
@@ -787,6 +788,14 @@ body.nav-open {
   white-space: nowrap;
   color: #7a869a;
   font-size: 0.94rem;
+}
+
+.footer-operator {
+  flex: 1 0 100%;
+  margin: 0;
+  color: #98a2b3;
+  font-size: 0.76rem;
+  line-height: 1.6;
 }
 
 .site-modal {
