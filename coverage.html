@@ -17,51 +17,97 @@
     <div class="container header-inner">
       <a class="brand-mark brand-mark--header" href="index.html" aria-label="NEXUS home"><span class="brand-mark__icon" aria-hidden="true"></span><span class="brand-mark__wordmark">NEXUS</span></a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span><span></span><span></span></button>
-      <nav id="site-nav" class="site-nav" aria-label="Primary"><a href="index.html">Home</a><a href="coverage.html" aria-current="page">Coverage</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
-      <div class="header-actions"><a class="button button-secondary header-phone" href="tel:+18005550198">Call Now</a><a class="button button-dark" href="contact.html">Get Started</a></div>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown__trigger-row">
+            <a class="nav-dropdown__link" href="coverage.html" aria-current="page">Coverage</a>
+            <button class="nav-dropdown__toggle" type="button" aria-expanded="false" aria-label="Toggle coverage menu"><i data-lucide="chevron-down" aria-hidden="true"></i></button>
+          </div>
+          <div class="nav-dropdown__menu">
+            <a href="coverage.html" aria-current="page">Coverage Overview</a>
+            <a href="liability-insurance.html">Liability Insurance</a>
+            <a href="full-coverage.html">Full Coverage</a>
+            <a href="collision-insurance.html">Collision Insurance</a>
+            <a href="comprehensive-insurance.html">Comprehensive Insurance</a>
+            <a href="uninsured-motorist.html">Uninsured Motorist</a>
+            <a href="sr22-insurance.html">SR-22 Insurance</a>
+          </div>
+        </div>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-actions"><a class="button button-secondary header-phone" href="tel:+18005550198">Call Now</a><button class="header-quote-icon" type="button" data-open-quote-modal aria-label="Open quote request form"><i data-lucide="square-pen" aria-hidden="true"></i></button><a class="button button-dark" href="contact.html">Get Started</a></div>
     </div>
   </header>
   <main id="main-content">
-    <section class="page-hero">
-      <div class="container page-hero__content">
-        <p class="section-tag">Coverage overview</p>
-        <h1>Review Auto Insurance Coverage Options Before You Compare</h1>
-        <p>Use this guide to understand how common coverage types work, what drivers often compare, and which pages to visit before requesting quotes.</p>
+    <section class="page-hero coverage-page-hero">
+      <div class="container coverage-hero-grid">
+        <div class="coverage-hero-copy">
+          <p class="section-tag">Coverage overview</p>
+          <h1>Explore auto insurance coverage options before you compare.</h1>
+          <p>Use this page to review common coverage types, understand what drivers typically compare, and move into quote requests only when a provider path fits your needs.</p>
+        </div>
+        <aside class="coverage-hero-visual" aria-label="Coverage preview">
+          <div class="coverage-hero-card">
+            <p class="coverage-hero-card__eyebrow">Comparison Focus</p>
+            <h2>Start with the coverage type that matches your vehicle, state rules, or filing needs.</h2>
+            <ul class="coverage-hero-card__list">
+              <li>Review how each coverage category usually works</li>
+              <li>Compare deductibles, state requirements, and vehicle risk factors</li>
+              <li>Continue to quote requests only after narrowing your options</li>
+            </ul>
+            <div class="coverage-hero-card__meta">
+              <p><strong>6</strong><span>coverage paths</span></p>
+              <p><strong>50-state</strong><span>comparison context</span></p>
+            </div>
+          </div>
+        </aside>
       </div>
     </section>
-    <section class="section">
-      <div class="container intro-split">
-        <div>
-          <h2>Built for comparison, not direct policy sales</h2>
-          <p>DriveQuote Compare helps users explore coverage options and connect with licensed insurance companies. The platform does not underwrite policies or make carrier recommendations.</p>
-        </div>
-        <div class="info-panel">
-          <h3>What to compare</h3>
-          <ul class="check-list">
-            <li>Required coverages in your state</li>
-            <li>Vehicle value and repair considerations</li>
-            <li>Deductible preferences</li>
-            <li>Driver history and household needs</li>
-          </ul>
-        </div>
+    <section class="section coverage-library-section surface-light" id="coverage-library">
+      <div class="coverage-library-prints" aria-hidden="true">
+        <span class="coverage-library-print coverage-library-print--car"><i data-lucide="car-front"></i></span>
+        <span class="coverage-library-print coverage-library-print--umbrella"><i data-lucide="umbrella"></i></span>
+        <span class="coverage-library-print coverage-library-print--people"><i data-lucide="users"></i></span>
+        <span class="coverage-library-print coverage-library-print--document"><i data-lucide="file-text"></i></span>
+        <span class="coverage-library-print coverage-library-print--car-small"><i data-lucide="car"></i></span>
+        <span class="coverage-library-print coverage-library-print--umbrella-small"><i data-lucide="cloud-rain"></i></span>
+        <span class="coverage-library-print coverage-library-print--people-small"><i data-lucide="user-round"></i></span>
+        <span class="coverage-library-print coverage-library-print--document-small"><i data-lucide="file-check-2"></i></span>
+        <span class="coverage-library-print coverage-library-print--car-mid"><i data-lucide="car-taxi-front"></i></span>
+        <span class="coverage-library-print coverage-library-print--umbrella-mid"><i data-lucide="cloud-lightning"></i></span>
+        <span class="coverage-library-print coverage-library-print--people-mid"><i data-lucide="users-round"></i></span>
+        <span class="coverage-library-print coverage-library-print--document-mid"><i data-lucide="file-badge"></i></span>
       </div>
-    </section>
-    <section class="section surface-light">
       <div class="container">
+        <div class="coverage-library-heading">
+          <div class="section-heading section-heading--left coverage-library-heading__copy">
+            <p class="section-tag">Coverage types</p>
+            <h2>Review the most common coverage paths drivers compare.</h2>
+          </div>
+        </div>
         <div class="coverage-grid coverage-grid--full">
-          <article class="coverage-card coverage-card--large"><h2>Liability Insurance</h2><p>Usually forms the legal baseline for driving in many states and may help cover third-party bodily injury or property damage claims.</p><a href="liability-insurance.html">Explore liability insurance</a></article>
-          <article class="coverage-card coverage-card--large"><h2>Full Coverage</h2><p>A comparison term often used for policies that combine liability coverage with physical damage protections like collision and comprehensive.</p><a href="full-coverage.html">Explore full coverage</a></article>
-          <article class="coverage-card coverage-card--large"><h2>Collision Insurance</h2><p>Often reviewed by drivers with newer vehicles, loans, or leases who want to compare repair cost protection after collisions.</p><a href="collision-insurance.html">Explore collision insurance</a></article>
-          <article class="coverage-card coverage-card--large"><h2>Comprehensive Insurance</h2><p>Can be relevant when comparing protection for theft, weather events, animal strikes, falling objects, and other non-collision losses.</p><a href="comprehensive-insurance.html">Explore comprehensive insurance</a></article>
-          <article class="coverage-card coverage-card--large"><h2>Uninsured Motorist</h2><p>Comparison needs may vary by state because uninsured and underinsured motorist rules are not the same everywhere.</p><a href="uninsured-motorist.html">Explore uninsured motorist insurance</a></article>
-          <article class="coverage-card coverage-card--large"><h2>SR-22 Insurance Filings</h2><p>For drivers who need proof of financial responsibility, the comparison process often centers on filing availability and state requirements.</p><a href="sr22-insurance.html">Explore SR-22 insurance</a></article>
+          <article class="coverage-card coverage-card--large"><span class="coverage-card__icon" aria-hidden="true"><i data-lucide="shield"></i></span><h2>Liability Insurance</h2><p>Usually forms the legal baseline for driving in many states and may help cover third-party bodily injury or property damage claims.</p><a href="liability-insurance.html">Explore liability insurance</a></article>
+          <article class="coverage-card coverage-card--large"><span class="coverage-card__icon" aria-hidden="true"><i data-lucide="badge-check"></i></span><h2>Full Coverage</h2><p>A comparison term often used for policies that combine liability coverage with physical damage protections like collision and comprehensive.</p><a href="full-coverage.html">Explore full coverage</a></article>
+          <article class="coverage-card coverage-card--large"><span class="coverage-card__icon" aria-hidden="true"><i data-lucide="car-front"></i></span><h2>Collision Insurance</h2><p>Often reviewed by drivers with newer vehicles, loans, or leases who want to compare repair cost protection after collisions.</p><a href="collision-insurance.html">Explore collision insurance</a></article>
+          <article class="coverage-card coverage-card--large"><span class="coverage-card__icon" aria-hidden="true"><i data-lucide="cloud-rain-wind"></i></span><h2>Comprehensive Insurance</h2><p>Can be relevant when comparing protection for theft, weather events, animal strikes, falling objects, and other non-collision losses.</p><a href="comprehensive-insurance.html">Explore comprehensive insurance</a></article>
+          <article class="coverage-card coverage-card--large"><span class="coverage-card__icon" aria-hidden="true"><i data-lucide="users"></i></span><h2>Uninsured Motorist</h2><p>Comparison needs may vary by state because uninsured and underinsured motorist rules are not the same everywhere.</p><a href="uninsured-motorist.html">Explore uninsured motorist insurance</a></article>
+          <article class="coverage-card coverage-card--large"><span class="coverage-card__icon" aria-hidden="true"><i data-lucide="file-check"></i></span><h2>SR-22 Insurance Filings</h2><p>For drivers who need proof of financial responsibility, the comparison process often centers on filing availability and state requirements.</p><a href="sr22-insurance.html">Explore SR-22 insurance</a></article>
         </div>
       </div>
     </section>
-    <section class="section">
-      <div class="container cta-band">
-        <div><p class="section-tag">Next step</p><h2>Ready to request quotes?</h2><p>Start with your ZIP Code and connect with providers that operate in your area.</p></div>
-        <a class="button button-primary" href="contact.html" data-quote-link data-coverage="general-auto">Request Quotes</a>
+    <section class="section section-featured">
+      <div class="container feature-panel feature-panel--cta">
+        <div class="feature-panel__content">
+          <p class="section-tag">Next step</p>
+          <h2>Ready to compare coverage options with licensed providers?</h2>
+          <p>Start with your ZIP Code, review the coverage path that fits your needs, and continue only with the providers you want to hear from.</p>
+        </div>
+        <div class="feature-panel__actions">
+          <a class="button button-light" href="contact.html" data-quote-link data-coverage="general-auto">Get My Free Quote</a>
+          <a class="button button-dark-soft" href="tel:+18005550198">Speak to Support</a>
+        </div>
       </div>
     </section>
   </main>
@@ -74,7 +120,7 @@
         <div class="footer-social" aria-label="Footer quick links"><a href="coverage.html" aria-label="Explore coverage types"><i data-lucide="shield"></i></a><a href="contact.html" aria-label="Request quotes"><i data-lucide="phone"></i></a><a href="about.html" aria-label="Learn more about the platform"><i data-lucide="star"></i></a></div>
       </div>
       <div><h2>Product</h2><nav class="footer-links" aria-label="Footer product navigation"><a href="contact.html">Compare Quotes</a><a href="coverage.html">Coverage Types</a><a href="liability-insurance.html">Liability Coverage</a><a href="sr22-insurance.html">SR-22 Options</a></nav></div>
-      <div><h2>Company</h2><nav class="footer-links" aria-label="Footer company navigation"><a href="about.html">About Us</a><a href="contact.html">Contact</a><a href="about.html#platform-model">Platform Model</a><a href="contact.html#legal-requests">Legal Requests</a></nav></div>
+      <div><h2>Company</h2><nav class="footer-links" aria-label="Footer company navigation"><a href="about.html">About Us</a><a href="contact.html">Contact</a><a href="coverage.html">Coverage Overview</a><a href="contact.html#legal-requests">Legal Requests</a></nav></div>
     </div>
     <div class="container footer-bottom">
       <p class="site-disclaimer">Disclaimer: This site is a free service to assist users in connecting with insurance providers. We are not an insurance company and do not issue policies. All providers are independent and users should verify licensing and coverage details.</p>

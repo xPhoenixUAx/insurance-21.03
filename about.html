@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About DriveQuote Compare | Independent Auto Insurance Comparison Platform</title>
-  <meta name="description" content="Learn how DriveQuote Compare helps drivers review auto insurance coverage options and connect with licensed insurance providers across the USA.">
+  <title>About NEXUS | Independent Auto Insurance Comparison Platform</title>
+  <meta name="description" content="Learn how NEXUS helps drivers review auto insurance coverage options and connect with licensed insurance providers across the USA.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,600;700&display=swap" rel="stylesheet">
@@ -17,55 +17,131 @@
     <div class="container header-inner">
       <a class="brand-mark brand-mark--header" href="index.html" aria-label="NEXUS home"><span class="brand-mark__icon" aria-hidden="true"></span><span class="brand-mark__wordmark">NEXUS</span></a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span><span></span><span></span></button>
-      <nav id="site-nav" class="site-nav" aria-label="Primary"><a href="index.html">Home</a><a href="coverage.html">Coverage</a><a href="about.html" aria-current="page">About</a><a href="contact.html">Contact</a></nav>
-      <div class="header-actions"><a class="button button-secondary header-phone" href="tel:+18005550198">Call Now</a><a class="button button-dark" href="contact.html">Get Started</a></div>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown__trigger-row">
+            <a class="nav-dropdown__link" href="coverage.html">Coverage</a>
+            <button class="nav-dropdown__toggle" type="button" aria-expanded="false" aria-label="Toggle coverage menu"><i data-lucide="chevron-down" aria-hidden="true"></i></button>
+          </div>
+          <div class="nav-dropdown__menu">
+            <a href="coverage.html">Coverage Overview</a>
+            <a href="liability-insurance.html">Liability Insurance</a>
+            <a href="full-coverage.html">Full Coverage</a>
+            <a href="collision-insurance.html">Collision Insurance</a>
+            <a href="comprehensive-insurance.html">Comprehensive Insurance</a>
+            <a href="uninsured-motorist.html">Uninsured Motorist</a>
+            <a href="sr22-insurance.html">SR-22 Insurance</a>
+          </div>
+        </div>
+        <a href="about.html" aria-current="page">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-actions"><a class="button button-secondary header-phone" href="tel:+18005550198">Call Now</a><button class="header-quote-icon" type="button" data-open-quote-modal aria-label="Open quote request form"><i data-lucide="square-pen" aria-hidden="true"></i></button><a class="button button-dark" href="contact.html">Get Started</a></div>
     </div>
   </header>
   <main id="main-content">
-    <section class="page-hero">
-      <div class="container page-hero__content">
-        <p class="section-tag">About the platform</p>
-        <h1>A simpler way to compare auto insurance providers</h1>
-        <p>DriveQuote Compare was built to make quote comparison easier for drivers who want a clearer starting point before speaking with insurance companies.</p>
+    <section class="page-hero about-page-hero">
+      <div class="container about-hero-grid">
+        <div class="about-hero-copy">
+          <p class="section-tag">About the platform</p>
+          <h1>A clearer starting point for auto insurance comparison.</h1>
+          <p>NEXUS was created for drivers who want to understand coverage paths, organize quote requests, and connect with licensed insurance companies without bouncing between disconnected provider sites.</p>
+        </div>
+        <aside class="about-hero-aside" aria-label="Platform overview">
+          <div class="about-hero-note">
+            <p class="about-hero-note__eyebrow">Platform Focus</p>
+            <h2>We simplify the comparison stage so users can move into provider conversations with more context.</h2>
+            <ul class="about-hero-note__list">
+              <li>Coverage-first navigation before quote requests</li>
+              <li>Independent platform model for the USA market</li>
+              <li>Provider terms and underwriting remain separate</li>
+            </ul>
+            <div class="about-hero-note__meta">
+              <p><strong>Independent</strong><span>comparison-first model</span></p>
+              <p><strong>USA market</strong><span>location-aware quote paths</span></p>
+            </div>
+          </div>
+        </aside>
       </div>
     </section>
-    <section class="section">
-      <div class="container story-grid">
-        <article>
-          <h2>How the platform started</h2>
-          <p>Many drivers begin the search for auto insurance by visiting multiple carrier websites, re-entering the same details, and trying to understand how coverage terms differ. DriveQuote Compare was created to streamline that first step.</p>
-          <p>The goal is straightforward: help users review common coverage paths, organize their quote request process, and connect with licensed insurance companies that operate in their market.</p>
-        </article>
-        <div class="sidebar-stack">
-          <figure class="visual-placeholder visual-placeholder--compact" aria-label="Placeholder for about page image">
-            <figcaption>
-              <p class="visual-placeholder__label">Image Placeholder</p>
-              <p class="visual-placeholder__prompt">Prompt: diverse adults reviewing car insurance options together at a table with laptop and paperwork, natural office setting, candid trustworthy lifestyle photography</p>
-            </figcaption>
-          </figure>
-          <aside class="info-panel">
-            <h3>What users can do here</h3>
-            <ul class="check-list">
-              <li>Explore common coverage categories</li>
-              <li>Review comparison-focused guidance</li>
-              <li>Request quotes based on location and needs</li>
-              <li>Choose whether to continue with a provider</li>
-            </ul>
-          </aside>
+
+    <section class="section about-story-section">
+      <div class="container about-story-grid">
+        <div class="about-story-copy">
+          <p class="section-tag">Why it exists</p>
+          <h2>Comparing coverage should feel organized, not repetitive.</h2>
+          <p>Many drivers begin by re-entering the same details across multiple insurer sites while trying to decode terms that are explained differently every time. NEXUS was built to make that first stage more structured.</p>
+          <p>The aim is straightforward: help users review common coverage categories, understand what typically changes between providers, and move into quote requests with more confidence about what they actually want to compare.</p>
+        </div>
+        <div class="about-story-visual">
+          <div class="about-story-visual__image" role="img" aria-label="Driver hands on steering wheel in city traffic"></div>
+          <div class="about-story-quote">
+            <p>Built to reduce friction in the early comparison process, not to replace licensed insurance providers.</p>
+          </div>
         </div>
       </div>
     </section>
-    <section class="section surface-light" id="platform-model">
-      <div class="container about-panels">
-        <article class="about-panel"><h2>Aggregator model</h2><p>This website operates as an independent aggregator platform. It helps users compare insurance providers and request quote connections, but it does not issue policies or act as the insurer.</p></article>
-        <article class="about-panel"><h2>Why comparison matters</h2><p>Coverage availability, pricing factors, deductibles, and state-specific rules can vary. Comparing multiple providers gives users a more practical way to review available plans before deciding who to contact.</p></article>
-        <article class="about-panel"><h2>Transparent user choice</h2><p>Users remain in control of the process. The platform surfaces comparison pathways, while licensed insurance companies remain responsible for their own underwriting, terms, and policy details.</p></article>
+
+    <section class="section about-compare-section">
+      <div class="container about-compare-grid">
+        <div class="about-compare-copy">
+          <p class="section-tag">How to compare</p>
+          <h2>Built for comparison, <span class="about-compare-copy__muted">not direct policy sales.</span></h2>
+          <p>NEXUS helps users review coverage categories and connect with licensed insurance companies. The platform does not issue policies, set rates, or recommend one insurer over another.</p>
+        </div>
+        <div class="about-compare-cards">
+          <article class="about-compare-card">
+            <span class="about-compare-card__icon" aria-hidden="true"><i data-lucide="search"></i></span>
+            <h3>What drivers compare</h3>
+            <p>Required coverages, deductible tradeoffs, vehicle value, repair costs, and provider availability in their state.</p>
+          </article>
+          <article class="about-compare-card">
+            <span class="about-compare-card__icon" aria-hidden="true"><i data-lucide="zap"></i></span>
+            <h3>How the flow works</h3>
+            <p>Review coverage pages first, then request quotes only for the options that match your vehicle, location, and preferences.</p>
+          </article>
+        </div>
       </div>
     </section>
-    <section class="section">
-      <div class="container cta-band">
-        <div><p class="section-tag">Compare next</p><h2>Explore coverage options or request quotes</h2><p>Start with the coverage overview or go directly to the quote request page.</p></div>
-        <div class="cta-band__actions"><a class="button button-primary" href="coverage.html">Explore Coverage</a><a class="button button-ghost" href="contact.html">Request Quotes</a></div>
+
+    <section class="section about-rhythm-section">
+      <div class="container">
+        <div class="about-rhythm-heading">
+          <p class="section-tag">How the platform fits</p>
+            <h2>Where <span class="about-rhythm-heading__muted">NEXUS</span> sits in the decision journey.</h2>
+          </div>
+        <div class="about-rhythm-grid">
+          <article class="about-rhythm-card">
+            <span class="about-rhythm-card__index">01</span>
+            <h3>Review coverage categories</h3>
+            <p>Users start by comparing coverage types such as liability, collision, comprehensive, uninsured motorist, or SR-22-related filing needs.</p>
+          </article>
+          <article class="about-rhythm-card">
+            <span class="about-rhythm-card__index">02</span>
+            <h3>Narrow the comparison focus</h3>
+            <p>From there, the platform helps users think through deductibles, vehicle value, state rules, and which provider pathways are worth exploring.</p>
+          </article>
+          <article class="about-rhythm-card">
+            <span class="about-rhythm-card__index">03</span>
+            <h3>Continue with providers</h3>
+            <p>Once users are ready, they can request quotes and decide which licensed insurance companies they want to hear from next.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-featured">
+      <div class="container feature-panel feature-panel--cta">
+        <div class="feature-panel__content">
+          <p class="section-tag">Compare next</p>
+          <h2>Explore coverage options or continue to quote requests.</h2>
+          <p>Start with the coverage overview if you want more context, or go directly to the request flow when you are ready to compare providers in your area.</p>
+        </div>
+        <div class="feature-panel__actions">
+          <a class="button button-light" href="coverage.html">Explore Coverage</a>
+          <a class="button button-dark-soft" href="contact.html">Request Quotes</a>
+        </div>
       </div>
     </section>
   </main>
@@ -78,7 +154,7 @@
         <div class="footer-social" aria-label="Footer quick links"><a href="coverage.html" aria-label="Explore coverage types"><i data-lucide="shield"></i></a><a href="contact.html" aria-label="Request quotes"><i data-lucide="phone"></i></a><a href="about.html" aria-label="Learn more about the platform"><i data-lucide="star"></i></a></div>
       </div>
       <div><h2>Product</h2><nav class="footer-links" aria-label="Footer product navigation"><a href="contact.html">Compare Quotes</a><a href="coverage.html">Coverage Types</a><a href="liability-insurance.html">Liability Coverage</a><a href="sr22-insurance.html">SR-22 Options</a></nav></div>
-      <div><h2>Company</h2><nav class="footer-links" aria-label="Footer company navigation"><a href="about.html">About Us</a><a href="contact.html">Contact</a><a href="about.html#platform-model">Platform Model</a><a href="contact.html#legal-requests">Legal Requests</a></nav></div>
+      <div><h2>Company</h2><nav class="footer-links" aria-label="Footer company navigation"><a href="about.html">About Us</a><a href="contact.html">Contact</a><a href="coverage.html">Coverage Overview</a><a href="contact.html#legal-requests">Legal Requests</a></nav></div>
     </div>
     <div class="container footer-bottom">
       <p class="site-disclaimer">Disclaimer: This site is a free service to assist users in connecting with insurance providers. We are not an insurance company and do not issue policies. All providers are independent and users should verify licensing and coverage details.</p>
@@ -90,5 +166,3 @@
   <script src="js/about.js" defer></script>
 </body>
 </html>
-
-
