@@ -235,3 +235,139 @@ document.querySelectorAll("[data-quote-form]").forEach((form) => {
     }
   });
 });
+
+function initSiteMotion() {
+  const gsap = window.gsap;
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (!gsap || prefersReducedMotion) {
+    return;
+  }
+
+  if (window.ScrollTrigger) {
+    gsap.registerPlugin(window.ScrollTrigger);
+  }
+
+  const isRenderable = (element) => element instanceof HTMLElement && element.getClientRects().length > 0;
+
+  const animateHeroBlock = (selector, offset = 0) => {
+    document.querySelectorAll(selector).forEach((block) => {
+      const children = Array.from(block.children).filter(isRenderable);
+
+      if (!children.length) {
+        return;
+      }
+
+      gsap.from(children, {
+        autoAlpha: 0,
+        y: 22,
+        duration: 0.72,
+        ease: "power2.out",
+        stagger: 0.08,
+        delay: offset,
+        clearProps: "transform,opacity,visibility"
+      });
+    });
+  };
+
+  const animateHeroVisual = (selector, config = {}) => {
+    document.querySelectorAll(selector).forEach((block) => {
+      if (!isRenderable(block)) {
+        return;
+      }
+
+      gsap.from(block, {
+        autoAlpha: 0,
+        x: config.x ?? 20,
+        y: config.y ?? 20,
+        scale: config.scale ?? 0.98,
+        duration: 0.8,
+        delay: config.delay ?? 0.18,
+        ease: "power2.out",
+        clearProps: "transform,opacity,visibility"
+      });
+    });
+  };
+
+  const revealOnScroll = (selector, options = {}) => {
+    gsap.utils.toArray(selector).forEach((element, index) => {
+      if (!isRenderable(element)) {
+        return;
+      }
+
+      const tweenConfig = {
+        autoAlpha: 1,
+        y: 0,
+        duration: options.duration ?? 0.65,
+        ease: options.ease ?? "power2.out",
+        delay: (options.delay ?? 0) + index * (options.stagger ?? 0),
+        overwrite: "auto",
+        clearProps: "transform,opacity,visibility"
+      };
+
+      gsap.set(element, {
+        autoAlpha: 0,
+        y: options.y ?? 28
+      });
+
+      if (window.ScrollTrigger) {
+        tweenConfig.scrollTrigger = {
+          trigger: options.trigger ?? element,
+          start: options.start ?? "top 88%",
+          once: true
+        };
+      }
+
+      gsap.to(element, tweenConfig);
+    });
+  };
+
+  animateHeroBlock(".hero-home .hero-copy");
+  animateHeroVisual(".hero-home .hero-visual", { x: 28, y: 0, scale: 0.985, delay: 0.12 });
+
+  animateHeroBlock(".coverage-hero-copy");
+  animateHeroVisual(".coverage-hero-visual", { x: 24, y: 0, scale: 0.985, delay: 0.14 });
+
+  animateHeroBlock(".about-hero-copy");
+  animateHeroVisual(".about-hero-aside", { x: 24, y: 0, scale: 0.99, delay: 0.14 });
+
+  animateHeroBlock(".contact-hero-copy");
+  animateHeroVisual(".contact-hero-aside", { x: 24, y: 0, scale: 0.99, delay: 0.14 });
+
+  animateHeroBlock(".legal-hero-copy");
+  animateHeroVisual(".legal-hero-note", { x: 24, y: 0, scale: 0.99, delay: 0.14 });
+
+  [
+    ".section-heading",
+    ".steps-grid .step-card",
+    ".coverage-service-list .coverage-service-item",
+    ".coverage-preview-card",
+    ".coverage-mobile-grid .coverage-mobile-card",
+    ".why-list .why-item",
+    ".faq-list .faq-item",
+    ".feature-panel",
+    ".coverage-grid .coverage-card",
+    ".coverage-hero-card",
+    ".about-story-copy",
+    ".about-story-visual",
+    ".about-compare-copy",
+    ".about-compare-card",
+    ".about-rhythm-card",
+    ".contact-form-card",
+    ".contact-info-card",
+    ".contact-map-card",
+    ".contact-transparency-card",
+    ".legal-card",
+    ".legal-sidebar-card",
+    ".coverage-summary-copy",
+    ".coverage-summary-card",
+    ".coverage-factor-card",
+    ".coverage-text-card",
+    ".coverage-cta-panel",
+    ".cookie-banner"
+  ].forEach((selector) => {
+    revealOnScroll(selector);
+  });
+}
+
+initSiteMotion();

@@ -19,6 +19,7 @@ faqItems.forEach((item) => {
 });
 
 const coverageShowcase = document.querySelector("[data-coverage-showcase]");
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 if (coverageShowcase) {
   const items = coverageShowcase.querySelectorAll(".coverage-service-item");
@@ -29,6 +30,40 @@ if (coverageShowcase) {
   const previewCopy = previewCard?.querySelector("[data-preview-copy]");
   const previewLink = previewCard?.querySelector("[data-preview-link]");
   const previewMedia = previewCard?.querySelector("[data-preview-media]");
+
+  const animatePreviewSwap = () => {
+    if (!window.gsap || prefersReducedMotion) {
+      return;
+    }
+
+    const contentParts = [previewTitleSmall, previewHeading, previewCopy, previewLink].filter(Boolean);
+
+    window.gsap.fromTo(
+      previewMedia,
+      { autoAlpha: 0.72, scale: 1.035 },
+      {
+        autoAlpha: 1,
+        scale: 1,
+        duration: 0.42,
+        ease: "power2.out",
+        overwrite: "auto"
+      }
+    );
+
+    window.gsap.fromTo(
+      contentParts,
+      { autoAlpha: 0, y: 10 },
+      {
+        autoAlpha: 1,
+        y: 0,
+        duration: 0.34,
+        stagger: 0.04,
+        ease: "power2.out",
+        overwrite: "auto",
+        clearProps: "transform,opacity,visibility"
+      }
+    );
+  };
 
   const activateService = (item) => {
     items.forEach((button) => {
@@ -68,6 +103,8 @@ if (coverageShowcase) {
       previewIconWrap.innerHTML = `<i data-lucide="${icon}"></i>`;
       window.lucide?.createIcons();
     }
+
+    animatePreviewSwap();
   };
 
   items.forEach((item) => {
