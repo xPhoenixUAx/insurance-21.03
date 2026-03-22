@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="NEXUS favicon">
+  <rect x="4" y="4" width="56" height="56" rx="18" fill="#0b0b0d"/>
+  <path
+    d="M32 14L44 19V28C44 36.4 38.88 44.12 32 48C25.12 44.12 20 36.4 20 28V19L32 14Z"
+    fill="none"
+    stroke="#ffffff"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="4"
+  />
+</svg>

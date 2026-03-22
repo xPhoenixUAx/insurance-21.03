@@ -922,6 +922,27 @@
 }
 
 @media (max-width: 1100px) {
+  .page-home .hero-home::before {
+    display: none;
+  }
+
+  .page-home .hero-home {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.58) 0%,
+        rgba(248, 251, 255, 0.64) 36%,
+        rgba(244, 248, 255, 0.74) 100%
+      ),
+      linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.76) 0%,
+        rgba(255, 255, 255, 0.44) 38%,
+        rgba(255, 255, 255, 0) 100%
+      ),
+      url("../images/home-page/hero-bg.jpg") center center / cover no-repeat;
+  }
+
   .page-home .hero-grid {
     grid-template-columns: minmax(0, 1fr);
     gap: 2.5rem;
@@ -929,14 +950,26 @@
 
   .page-home .hero-copy {
     max-width: 100%;
+    text-align: center;
   }
 
   .page-home .hero-copy h1 {
     max-width: 13ch;
+    margin-inline: auto;
   }
 
-  .page-home .hero-visual__frame {
-    min-height: 500px;
+  .page-home .hero-subtitle,
+  .page-home .quote-form--hero-inline,
+  .page-home .hero-social-proof {
+    margin-inline: auto;
+  }
+
+  .page-home .hero-social-proof {
+    justify-content: center;
+  }
+
+  .page-home .hero-visual {
+    display: none;
   }
 
   .page-home .steps-grid--home {
@@ -1033,15 +1066,20 @@
 @media (max-width: 720px) {
   .page-home .hero-home {
     padding: 1.5rem 0 3.5rem;
-  }
-
-  .page-home .hero-home::before {
-    left: -2rem;
-    top: auto;
-    bottom: 2rem;
-    width: 180px;
-    height: 180px;
-    opacity: 0.05;
+    background:
+      linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.6) 0%,
+        rgba(248, 251, 255, 0.68) 42%,
+        rgba(243, 247, 255, 0.78) 100%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.04) 0%,
+        rgba(255, 255, 255, 0.4) 64%,
+        rgba(255, 255, 255, 0.74) 100%
+      ),
+      url("../images/home-page/hero-bg.jpg") 58% center / cover no-repeat;
   }
 
   .page-home .hero-badge {
@@ -1072,6 +1110,8 @@
     align-items: flex-start;
     flex-direction: column;
     gap: 0.75rem;
+    align-items: center;
+    text-align: center;
   }
 
   .page-home .hero-visual__frame {

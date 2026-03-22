@@ -219,6 +219,12 @@
   font-weight: 700;
 }
 
+.page-contact .contact-info-list a span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
 .page-contact .contact-info-list svg {
   width: 1rem;
   height: 1rem;

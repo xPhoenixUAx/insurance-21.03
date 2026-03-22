@@ -2,6 +2,42 @@ if (window.lucide) {
   window.lucide.createIcons();
 }
 
+const cookieConsentKey = "nexus-cookie-consent";
+const storedCookieConsent = window.localStorage.getItem(cookieConsentKey);
+
+if (!storedCookieConsent && !document.querySelector("[data-cookie-banner]")) {
+  const cookieBanner = document.createElement("section");
+  cookieBanner.className = "cookie-banner";
+  cookieBanner.setAttribute("data-cookie-banner", "");
+  cookieBanner.setAttribute("aria-label", "Cookie consent");
+  cookieBanner.innerHTML = `
+    <div class="cookie-banner__copy">
+      <h2>We use cookies</h2>
+      <p>NEXUS uses cookies and similar technologies to support site functionality, understand usage, and improve the platform. See our <a href="cookies.html">Cookie Policy</a>.</p>
+    </div>
+    <div class="cookie-banner__actions">
+      <button class="button button-dark" type="button" data-cookie-accept>Accept All</button>
+      <button class="button button-ghost" type="button" data-cookie-reject>Reject Non-Essential</button>
+    </div>
+  `;
+  document.body.appendChild(cookieBanner);
+}
+
+const cookieBanner = document.querySelector("[data-cookie-banner]");
+
+function setCookieConsent(value) {
+  window.localStorage.setItem(cookieConsentKey, value);
+  cookieBanner?.setAttribute("hidden", "");
+}
+
+cookieBanner?.querySelector("[data-cookie-accept]")?.addEventListener("click", () => {
+  setCookieConsent("accepted");
+});
+
+cookieBanner?.querySelector("[data-cookie-reject]")?.addEventListener("click", () => {
+  setCookieConsent("rejected");
+});
+
 const quoteModalTriggers = document.querySelectorAll("[data-open-quote-modal]");
 
 if (quoteModalTriggers.length && !document.querySelector("[data-global-quote-modal]")) {
@@ -127,6 +163,7 @@ if (menuToggle && siteNav) {
     const expanded = menuToggle.getAttribute("aria-expanded") === "true";
     menuToggle.setAttribute("aria-expanded", String(!expanded));
     siteNav.classList.toggle("is-open");
+    document.body.classList.toggle("nav-open", !expanded);
 
     if (expanded) {
       navDropdowns.forEach((dropdown) => {
